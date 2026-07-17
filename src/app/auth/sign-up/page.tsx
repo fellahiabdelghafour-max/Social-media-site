@@ -137,7 +137,7 @@ export default function SignUp(){
                         
                       }          
                     }}>
-                     Do you already have an account 
+                     Do you have an account?
                     </Typography>           
 
                

@@ -130,7 +130,7 @@ export default function SignUp(){
                         
                       }          
                     }}>
-                     Do you already have an account 
+                     {"you don't have an account ?"}
                     </Typography>    
              <CustomizedSnackbars/>
         </Card>
