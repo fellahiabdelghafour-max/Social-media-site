@@ -47,7 +47,7 @@ export default function SignUp(){
         else {
             handleError('Success SIGN IN ')
             handleStatus('success')
-            route.push('/usePage')
+            route.push('/')
         }
         handleClick();        
        })    
