@@ -92,9 +92,9 @@ export default function PrimarySearchAppBar() {
             <Box sx={{display:open? '':'none',p:'5px',m:2,position:'absolute',backgroundColor:'#212121',borderRadius:'10px'    }}>
                {
 
-                        Term.length<=2 
+                        Term.length<=2
                         ?null
-                        : posts=== undefined 
+                        : posts===undefined
                         ? <Box sx={{
                                 width:'400px',
                                 height:'60px',

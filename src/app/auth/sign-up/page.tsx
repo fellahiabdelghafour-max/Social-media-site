@@ -3,11 +3,11 @@
 
 import { authClient } from "@/lib/auth-client";
 import { Visibility, VisibilityOff } from "@mui/icons-material"
-import { Button, Card, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from "@mui/material"
+import { Button, Card, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField, Typography } from "@mui/material"
 import { useId, useState, useTransition } from "react";
 import { useToastContext } from "@/context/toastContext/toastContext";
 import CustomizedSnackbars from '@/components/toast/toast'
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 interface user{
     name:string,
     password:string,
@@ -54,7 +54,16 @@ export default function SignUp(){
       
     }
     return(
-        <Card sx={{display:'flex',alignItems:'center',justifyContent:'center',borderRadius:'10px',height:'70vh',bgcolor:'background.paper',p:10,width:'70%'}}>
+        <Card sx={{display:'flex',
+        alignItems:'center',
+        justifyContent:'center',
+        borderRadius:'10px',
+        height:'70vh',
+        bgcolor:'background.paper',
+        p:10,width:'70%',
+        flexDirection:'column',
+        gap:'15px'
+        }}>
             <CustomizedSnackbars/>
               <form>
                 <TextField value={user.name}
@@ -113,7 +122,23 @@ export default function SignUp(){
                         />
                 <Button variant="contained" onClick={handleSubmit} loading={isPending} loadingPosition="start">Sign UP</Button>
 
-              </form>                
+              </form>     
+                 <Typography 
+                 onClick={()=>redirect('/auth/login')}
+                    sx={{
+                      color:'#0044ff',
+                      textShadow:'5px 5px 10px #008cff' ,
+                      transition:'0.5s',
+                      ':hover':{
+                        color:'#0044ff91',
+                         textShadow: "6px 6px 13px #008cff",
+                        transform:'translate(20px)',
+                        cursor:"pointer"
+                        
+                      }          
+                    }}>
+                     Do you already have an account 
+                    </Typography>           
 
                
         </Card>
