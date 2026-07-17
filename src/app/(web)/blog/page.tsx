@@ -11,7 +11,7 @@ import { getToken } from "@/lib/auth-server";
 export default async function Blog() {
     const token=await getToken();
   if(!token){
-    return redirect('/auth/login')
+    return redirect('/auth/sign-up')
   }
 
   return (
